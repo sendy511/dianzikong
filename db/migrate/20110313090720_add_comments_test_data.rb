@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class AddCommentsTestData < ActiveRecord::Migration
   def self.up
     Comment.create(
