@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class AddCategoryTestData < ActiveRecord::Migration
   def self.up
     Category.create(:name => "民族产业雄起")
