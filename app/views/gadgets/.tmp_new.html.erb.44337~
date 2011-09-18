@@ -1,0 +1,18 @@
+  
+<script type="application/javascript">
+	window.onload = function() {
+	  var oFCKeditor = new FCKeditor('gadget_content');
+	  oFCKeditor.BasePath = "/javascripts/FCKEditor/";
+	  oFCKeditor.Config["CustomConfigurationsPath"] =
+	    '<%= javascript_path "railsfck.js" %>';
+	  oFCKeditor.ReplaceTextarea();
+	}
+</script>
+
+<h1>New gadget</h1>
+
+<div style="text-align:left;">
+<%= render 'form' %>
+</div>
+
+<%= link_to 'Back', gadgets_path %>

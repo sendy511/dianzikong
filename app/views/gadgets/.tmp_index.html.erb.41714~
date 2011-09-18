@@ -1,0 +1,24 @@
+<div style="position:absolute;top:20px;right:110px; color:#2B68DB;text-align:left;">
+	 &nbsp;&nbsp;我 喜欢 新技术<br/>
+	我 着迷 最前沿的产品<br/>
+	&nbsp;&nbsp;我 也看 也买<br/>
+	&nbsp;&nbsp;我 是  电子控 <br/>
+</div>
+<div id="itemlist">
+<% i = 0 %>
+<% @gadgets.each do |gadget| %>
+	<% if i > 15 then break end%>
+	<% i = i + 1%>
+  	<div id="item" style="margin-top:10px">
+		<div id="title" style="font-size:large; text-align:left;">
+			<%= link_to gadget.title, {:action => "show", :id => gadget }%>
+		</div>
+		<div id="summary"style="text-align:left;">
+			<%= gadget.content.slice(0, 800) %>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 >> <%= link_to "More ....", {:action => "show", :id => gadget }%>
+		</div>
+    	<div style="font-size:smaller; text-align:left;"><%= gadget.lastupdatetime %></div>
+	</div>
+<% end %>
+</div>

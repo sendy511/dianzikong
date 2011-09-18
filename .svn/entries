@@ -1,0 +1,129 @@
+10
+
+dir
+11
+https://dianzikong.googlecode.com/svn/trunk
+https://dianzikong.googlecode.com/svn
+
+
+
+2011-09-10T14:59:49.033992Z
+11
+sendy.dou@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22c28846-1351-a7d9-0d17-6cd7833ca961
+
+test
+dir
+
+app
+dir
+
+tmp
+dir
+
+log
+dir
+
+Rakefile
+file
+
+
+
+
+2011-03-20T05:47:50.087049Z
+17f2f134da4cd31ea095d5868ca89e86
+2011-09-10T14:59:49.033992Z
+11
+sendy.dou@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+307
+
+script
+dir
+
+config
+dir
+
+db
+dir
+
+doc
+dir
+
+lib
+dir
+
+README
+file
+
+
+
+
+2011-03-20T05:47:50.095049Z
+a58e68a7599c976f071d5b9c6fa67fb3
+2011-09-10T14:59:49.033992Z
+11
+sendy.dou@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10011
+
+vendor
+dir
+
+public
+dir
+

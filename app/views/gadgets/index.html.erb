@@ -1,0 +1,19 @@
+<div id="itemlist" class="itemlist">
+<% i = 0 %>
+<% @gadgets.each do |gadget| %>
+	<% if i > 15 then break end%>
+	<% i = i + 1%>
+  	<div id="item" class ="item">
+		<div id="title" class="title">
+			<%= link_to gadget.title, {:action => "show", :id => gadget }%>
+		</div>
+		<div id="summary" class="summary">
+			<%= gadget.content.slice(0, 800) %>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 >> <%= link_to "More ....", {:action => "show", :id => gadget }%>
+		</div>
+    	<div class="date"><%= gadget.lastupdatetime %></div>
+	</div>
+<% end %>
+</div>
+<%= render :partial => "recommendation", :object => @category_with_one_gadget %>

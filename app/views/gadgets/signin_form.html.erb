@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>  
+   	<head>  
+		<title>Signin for Admin Access</title>  
+	</head>  
+	<body>  
+		<% form_for :Gadget, :url => {:action => "signin"} do |f| %>  
+			Username:  
+			<%= f.text_field :name %><br/>  
+			Password:  
+	  		<%= f.text_field :password %><br/>
+			<%= f.submit "登录"%>
+	 	<% end %> 
+  	</body>  
+  </html>  

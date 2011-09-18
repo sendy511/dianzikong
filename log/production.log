@@ -1,0 +1,72 @@
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-12 09:24:41) [GET]
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: gadgets: SELECT * FROM "gadgets"  ORDER BY updated_at DESC LIMIT 20):
+  app/controllers/gadgets_controller.rb:33:in `index'
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-12 09:25:18) [GET]
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: gadgets: SELECT * FROM "gadgets"  ORDER BY updated_at DESC LIMIT 20):
+  app/controllers/gadgets_controller.rb:33:in `index'
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-12 09:25:25) [GET]
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: gadgets: SELECT * FROM "gadgets"  ORDER BY updated_at DESC LIMIT 20):
+  app/controllers/gadgets_controller.rb:33:in `index'
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (internal_server_error)
