@@ -62,14 +62,14 @@ sendy.dou@gmail.com
 
 development.log
 file
+12
 
 
 
-
-2011-09-04T08:11:21.787039Z
-253c0d9ff7d81df51478193c96f14ea9
-2011-09-10T14:59:49.033992Z
-11
+2011-09-12T02:37:59.823451Z
+7076337f019016f9dc8b553d07fb7660
+2011-09-18T13:59:12.904630Z
+12
 sendy.dou@gmail.com
 
 
@@ -92,7 +92,7 @@ sendy.dou@gmail.com
 
 
 
-394718
+408567
 
 server.log
 file
@@ -130,14 +130,14 @@ sendy.dou@gmail.com
 
 production.log
 file
+12
 
 
 
-
-2011-03-20T05:47:46.487049Z
-d41d8cd98f00b204e9800998ecf8427e
-2011-09-10T14:59:49.033992Z
-11
+2011-09-12T01:25:25.667451Z
+fa96262cbc349135bee00060289e5a40
+2011-09-18T13:59:12.904630Z
+12
 sendy.dou@gmail.com
 
 
@@ -160,5 +160,5 @@ sendy.dou@gmail.com
 
 
 
-0
+3489
 

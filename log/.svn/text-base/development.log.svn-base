@@ -9169,3 +9169,292 @@ ActionController::RoutingError (No route matches "/images/logo2.gif" with {:meth
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-12 09:09:05) [GET]
+  [4;36;1mGadget Load (11.2ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.7ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.6ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (13.7ms)
+Completed in 245ms (View: 169, DB: 14) | 200 OK [http://localhost/gadgets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:09:06) [GET]
+
+ActionController::RoutingError (No route matches "/~/public/1-100R6223536.jpg" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:09:06) [GET]
+
+ActionController::RoutingError (No route matches "/rails.png" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:09:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-12 09:46:38) [GET]
+  [4;36;1mGadget Load (154.2ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (19.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (25.1ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (3.6ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (20.7ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (99.9ms)
+Completed in 3500ms (View: 2094, DB: 223) | 200 OK [http://localhost/gadgets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:46:50) [GET]
+
+ActionController::RoutingError (No route matches "/~/public/1-100R6223536.jpg" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:46:51) [GET]
+
+ActionController::RoutingError (No route matches "/rails.png" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:46:57) [GET]
+
+ActionController::RoutingError (No route matches "/~/public/1-100R6223536.jpg" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:46:57) [GET]
+
+ActionController::RoutingError (No route matches "/rails.png" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 09:46:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-12 10:37:57) [GET]
+  [4;36;1mGadget Load (16.8ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (11.8ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (1.7ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (19.0ms)
+Completed in 613ms (View: 429, DB: 32) | 200 OK [http://dianzikongtest.com/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 10:37:59) [GET]
+
+ActionController::RoutingError (No route matches "/~/public/1-100R6223536.jpg" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 10:37:59) [GET]
+
+ActionController::RoutingError (No route matches "/rails.png" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-12 10:37:59) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  thin (1.2.11) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:82:in `catch'
+  thin (1.2.11) lib/thin/connection.rb:82:in `pre_process'
+  thin (1.2.11) lib/thin/connection.rb:57:in `process'
+  thin (1.2.11) lib/thin/connection.rb:42:in `receive_data'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run_machine'
+  eventmachine (0.12.10) lib/eventmachine.rb:256:in `run'
+  thin (1.2.11) lib/thin/backends/base.rb:61:in `start'
+  thin (1.2.11) lib/thin/server.rb:159:in `start'
+  thin (1.2.11) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.2.11) lib/thin/runner.rb:185:in `send'
+  thin (1.2.11) lib/thin/runner.rb:185:in `run_command'
+  thin (1.2.11) lib/thin/runner.rb:151:in `run!'
+  thin (1.2.11) bin/thin:6
+  /var/lib/gems/1.8/bin/thin:19:in `load'
+  /var/lib/gems/1.8/bin/thin:19
+
+Rendering rescues/layout (not_found)

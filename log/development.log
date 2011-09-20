@@ -9458,3 +9458,483 @@ ActionController::RoutingError (No route matches "/images/logo2.gif" with {:meth
   /var/lib/gems/1.8/bin/thin:19
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGadgets (20110216143238)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "gadgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "categoryid" integer, "creatdatetime" datetime, "lastupdatetime" datetime, "author" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110216143238')[0m
+Migrating to CreateCategories (20110312140520)
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110312140520')[0m
+Migrating to AddCategoryTestData (20110313070326)
+  [4;35;1mCategory Create (0.6ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('民族产业雄起', '2011-09-20 12:41:09', '2011-09-20 12:41:09')[0m
+  [4;36;1mCategory Create (0.3ms)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('外国东西', '2011-09-20 12:41:09', '2011-09-20 12:41:09')[0m
+  [4;35;1mCategory Create (0.3ms)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES('Just 电子', '2011-09-20 12:41:09', '2011-09-20 12:41:09')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110313070326')[0m
+Migrating to CreateComments (20110313084726)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "gadget_id" integer, "author_id" integer, "repliedcomments" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110313084726')[0m
+Migrating to AddCommentsTestData (20110313090720)
+  [4;35;1mComment Create (0.6ms)[0m   [0mINSERT INTO "comments" ("created_at", "updated_at", "repliedcomments", "gadget_id", "content", "author_id") VALUES('2011-09-20 12:41:10', '2011-09-20 12:41:10', NULL, 3, '我是注释我是注释我是注释我是注释我是注释我是注释我是注释我是注释我是注释我是注释我是注释我是注释我是注释我是注释', 55)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110313090720')[0m
+Migrating to CreateAuthors (20110319063231)
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110319063231')[0m
+Migrating to ChangeAuthorColumnOfGadget (20110319064028)
+  [4;35;1mSQL (8.3ms)[0m   [0mCREATE TEMPORARY TABLE "altered_gadgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "categoryid" integer, "creatdatetime" datetime, "lastupdatetime" datetime, "author_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("gadgets")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "gadgets"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "gadgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "categoryid" integer, "creatdatetime" datetime, "lastupdatetime" datetime, "author_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_gadgets")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "altered_gadgets"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110319064028')[0m
+Migrating to CreateAdminUsers (20110326072736)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110326072736')[0m
+Migrating to AddAdminUsers (20110326074513)
+  [4;36;1mAdminUser Create (0.5ms)[0m   [0;1mINSERT INTO "admin_users" ("name", "created_at", "updated_at", "password") VALUES('admin', '2011-09-20 12:41:10', '2011-09-20 12:41:10', '8433262')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110326074513')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("admin_users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("authors")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("gadgets")[0m
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:44:20) [GET]
+  [4;36;1mGadget Load (1.0ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #6 of app/views/gadgets/_recommendation.html.erb:
+3: 		
+4: 	<%recommendation.each do |key, value|%>
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<div class="rightcontent"> <%= link_to value.title, {:action => 'show', :id => value} %></div>
+7: 	<%end%> 
+8: 	
+9: </div>
+
+    app/views/gadgets/_recommendation.html.erb:6
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (200.4ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:11) [GET]
+  [4;35;1mGadget Load (0.8ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (98.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:12) [GET]
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (95.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:12) [GET]
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (213.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:13) [GET]
+  [4;36;1mGadget Load (0.8ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (98.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:14) [GET]
+  [4;35;1mGadget Load (0.8ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (216.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:15) [GET]
+  [4;36;1mGadget Load (0.8ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (94.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:15) [GET]
+  [4;35;1mGadget Load (1.1ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (98.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:16) [GET]
+  [4;36;1mGadget Load (1.1ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (213.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:16) [GET]
+  [4;35;1mGadget Load (0.8ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (98.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:16) [GET]
+  [4;36;1mGadget Load (0.8ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (205.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:17) [GET]
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (95.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:18) [GET]
+  [4;36;1mGadget Load (1.0ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (100.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:18) [GET]
+  [4;35;1mGadget Load (0.8ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #8 of app/views/gadgets/_recommendation.html.erb:
+5: 		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+6: 		<%unless value then%>
+7: 			<div class="rightcontent"> 
+8: 				<%= link_to value.title, {:action => 'show', :id => value} %>
+9: 			</div>
+10: 		<%end%>
+11: 	<%end%> 
+
+    app/views/gadgets/_recommendation.html.erb:8
+    app/views/gadgets/_recommendation.html.erb:4:in `each'
+    app/views/gadgets/_recommendation.html.erb:4
+    app/views/gadgets/index.html.erb:19
+    app/controllers/gadgets_controller.rb:41:in `index'
+
+Rendered rescues/_trace (180.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 20:55:47) [GET]
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (2.4ms)
+Completed in 96ms (View: 74, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-20 20:55:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

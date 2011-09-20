@@ -55,5 +55,5 @@ END
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/svn/!svn/ver/11/trunk/db/migrate/20110313070326_add_category_test_data.rb
+/svn/!svn/ver/12/trunk/db/migrate/20110313070326_add_category_test_data.rb
 END

@@ -18,13 +18,6 @@ ActiveRecord::Schema.define(:version => 20110326074513) do
     t.datetime "updated_at"
   end
 
-  create_table "adminusers", :force => true do |t|
-    t.string   "name"
-    t.string   "password"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "authors", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
