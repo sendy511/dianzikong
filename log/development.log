@@ -9938,3 +9938,83 @@ ActionController::RoutingError (No route matches "/images/logo2.gif" with {:meth
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 21:04:26) [GET]
+  [4;35;1mGadget Load (1.2ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (1.2ms)
+Completed in 36ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-20 21:04:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 21:04:29) [GET]
+  [4;36;1mGadget Load (1.2ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (2.0ms)
+Completed in 46ms (View: 17, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-20 21:04:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 21:04:29) [GET]
+  [4;35;1mGadget Load (0.8ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (1.4ms)
+Completed in 129ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-20 21:04:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2011-09-20 21:04:30) [GET]
+  [4;36;1mGadget Load (1.2ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (1.8ms)
+Completed in 52ms (View: 14, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-09-20 21:04:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/logo2.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
