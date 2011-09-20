@@ -21,8 +21,10 @@
 </div>
 
 <div class="logo">
-	<%= link_to (image_tag("logo.png"), :controller => "gadgets", :action => "index")
-	%>
+	<%=begin%> comments out first.
+	<%= link_to (image_tag("logo.png"), :controller => "gadgets", :action => "index")%>
+	<%=end %>
+	<%=image_tag("logo.png")%>
 </div>
 
 <!--The main content including Banner, Content -->
