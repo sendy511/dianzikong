@@ -1,3 +1,6 @@
+
+<%= render :partial => "recommendation", :object => @category_with_one_gadget %>
+
 <div id="itemlist" class="itemlist">
 <% i = 0 %>
 <% @gadgets.each do |gadget| %>
@@ -16,4 +19,3 @@
 	</div>
 <% end %>
 </div>
-<%= render :partial => "recommendation", :object => @category_with_one_gadget %>

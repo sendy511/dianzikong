@@ -51,14 +51,12 @@ a:hover {
     position: relative;
     display: inline;
     float: left;
-    width: 768px;
+    width: 76em;
 }
 
 .itemlist {
-    display: inline;
-    float: left;
     padding-right: 10px;
-    width: 758px;
+    width: 56em;
     text-align: left;
     border-right: 1px solid #EFEFEF;
 }
@@ -88,8 +86,7 @@ a:hover {
 }
 
 .rightColumn {
-    position: relative;
-    float: left;
+   	float:right;
     margin-left: 10px;
     width: 220px;
 }
