@@ -21,15 +21,20 @@
     <a href="/login">登录</a>
     <a class="nobg" href="/signup">注册</a>
   	</div>
+	<div class="clear"></div>
 </div>
 
 <div class="logo">
-	<%
-=begin %>
+
+<% if false %>
 	<%= link_to image_tag("logo.png"), :controller => "gadgets", :action => "index" %>
-	<%
-=end %>
 	<%= image_tag("logo.png")%>
+<% end %>
+
+	<div class="banner_part_1"></div>
+	<div class="banner_part_2"></div>
+	<div class="banner_part_3"></div>
+	<div class="clear"></div>
 </div>
 
 <!--The main content including Banner, Content -->
@@ -44,7 +49,7 @@
 		<span>* <%= link_to 'Legal', {:controller => 'misc', :action => 'legal'} %></span> 
 		<span>* Privacy</span> 
 		<span>* Advertising</span>
-		<span>* Subscribe</span>
+		<span>* <%= link_to 'Feedback', {:controller => 'feedbacks', :action => 'new'} %></span>
 		<!--<span>* Forums</span>-->
 		<br />
 		CopyRight (c) 2011. DianziKong@gmail.com

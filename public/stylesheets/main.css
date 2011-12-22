@@ -29,6 +29,7 @@ a:hover {
     float: right;
     margin: 5px 0;
     font-family: Arial, sans-serif, Helvetica, Tahoma;
+	height:10px;
 }
 
 .loginin a {
@@ -42,9 +43,31 @@ a:hover {
     color: #E28822;
 }
 
-.logo {
-    margin-bottom: 5px;
-    background: url("/images/logo.png") no-repeat scroll 50% 100% transparent color: #5585E2;
+.logo .banner_part_1
+{
+	width:241px;
+	height:82px;
+	background: url("/images/Banner_1.gif");
+	display:inline;
+	float:left;
+}
+
+.logo .banner_part_2
+{
+	width:496px;
+	height:82px;
+	background: url("/images/Banner_2.gif");
+	display:inline;
+	float:left;
+}
+
+.logo .banner_part_3
+{
+	width:255px;
+	height:82px;
+	background: url("/images/Banner_3.gif");
+	display:inline;
+	float:left;
 }
 
 .mainContent {
@@ -52,11 +75,12 @@ a:hover {
     display: inline;
     float: left;
     width: 76em;
+	top: 15px;
 }
 
 .itemlist {
     padding-right: 10px;
-    width: 56em;
+    width: 730px;
     text-align: left;
     border-right: 1px solid #EFEFEF;
 }
@@ -64,7 +88,63 @@ a:hover {
 .item {
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px solid #F3F3F3
+}
+
+.item .item_up{
+	height:12px;	 
+}
+
+.item .item_up .item_up_left{
+		background: url("/images/left_up.gif");
+		float:left;
+		width:12px;		
+		height: 12px;
+}
+
+.item .item_up .item_up_middle{
+		float:left;
+		width:700px;		
+		height: 12px;
+		border-top: 1px solid #91aecf
+}
+
+.item .item_up .item_up_right{
+		background: url("/images/right_up.gif");
+		float:left;
+		width:12px;
+		height: 12px;
+}
+
+.item .item_bottom{
+	height: 12px;
+}
+
+.item .item_bottom .item_bottom_left{
+		background: url("/images/left_down.gif");
+		float:left;
+		width:12px;
+		height:12px;
+}
+
+.item .item_bottom .item_bottom_middle{
+		float:left;
+		width:700px;
+		height:11px;
+		border-bottom: 1px solid #91aecf
+}
+
+.item .item_bottom .item_bottom_right{
+		background: url("/images/right_down.gif");
+		float:left;
+		width:12px;
+		height:12px;
+}
+
+.item .item_content{
+	width: 714px;
+	border-left: 1px solid #91aecf;
+	border-right: 1px solid #91aecf;
+	padding-left: 8px;
 }
 
 .item .title {
@@ -92,15 +172,17 @@ a:hover {
 }
 
 .righttitle {
-    background-image: url("/images/logo2.gif");
+    background-image: url("/images/ColumnTitle.gif");
     border-bottom: 1px solid #999;
-    margin-top: 2px;
-    font-size: 16px;
-    color: #0069CA
+   	margin-top: 2px;
+   	font-size: 15px;	 
+   	color: #4e83bf;
+	text-align:center;
+	height:20px;
 }
 
 .rightcontent {
-    margin: 10px 0px;
+    margin: 10px;
     font-size: 14px;
     color: #000;
 }
@@ -122,10 +204,8 @@ a:hover {
 
 .footer {
     margin: 0 auto;
-    margin-top: 50px;
     background: #ffffff;
-    text-align: center;
-    width: 1000px;
+    text-align: center;    
 }
 
 pre {

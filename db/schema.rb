@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110326074513) do
+ActiveRecord::Schema.define(:version => 20111025150017) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(:version => 20110326074513) do
     t.integer  "gadget_id"
     t.integer  "author_id"
     t.string   "repliedcomments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feedbacks", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "email"
+    t.string   "user_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

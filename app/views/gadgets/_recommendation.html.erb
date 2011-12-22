@@ -2,7 +2,7 @@
 <div id="rightColumn" class="rightColumn">
 			
 	<%recommendation.each do |key, value|%>
-		<div class="righttitle">&nbsp;&nbsp; :: <%= key.name %> ::</div>
+		<div class="righttitle"><%= key.name %></div>
 		<%if value!=nil then%>
 			<div class="rightcontent"> 
 				<%= link_to value.title, {:action => 'show', :id => value} %>

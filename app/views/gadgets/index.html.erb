@@ -7,15 +7,32 @@
 	<% if i > 15 then break end%>
 	<% i = i + 1%>
   	<div id="item" class ="item">
-		<div id="title" class="title">
-			<%= link_to gadget.title, {:action => "show", :id => gadget }%>
+  		<div class="item_up">
+  			<div class="item_up_left"></div>
+			<div class="item_up_middle"></div>
+			<div class="item_up_right"></div>
+			<div class="clear"></div>
+  		</div>
+		
+		<div id="item_content" class="item_content">
+			<div id="title" class="title">
+				<%= link_to gadget.title, {:action => "show", :id => gadget }%>
+			</div>
+			<div id="summary" class="summary">
+				<%= gadget.content.slice(0, 800) %>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 >> <%= link_to "More ....", {:action => "show", :id => gadget }%>
+			</div>
+	    	<div class="date"><%= gadget.lastupdatetime %></div>
 		</div>
-		<div id="summary" class="summary">
-			<%= gadget.content.slice(0, 800) %>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			 >> <%= link_to "More ....", {:action => "show", :id => gadget }%>
-		</div>
-    	<div class="date"><%= gadget.lastupdatetime %></div>
+		
+		<div class="item_bottom">
+  			<div class="item_bottom_left"></div>
+  			<div class="item_bottom_middle"></div>
+			<div class="item_bottom_right"></div>
+			<div class="clear"></div>
+  		</div>
+		<div class="clear"></div>
 	</div>
 <% end %>
 </div>
