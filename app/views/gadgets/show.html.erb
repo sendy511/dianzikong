@@ -22,9 +22,14 @@
   <%end%>
 </p>
 
+<div style="text-align:right;">
+  <%= link_to '上一篇', {:id => @previous_gadget}%>
+  <%= link_to '下一篇', {:id => @next_gadget}%>
+</div>
+
 
 <div style="text-align:right;">
-<%= link_to 'Back', gadgets_path %>
+  <%= link_to '返回', gadgets_path %>
 </div>
 
 <!--Comments Part-->

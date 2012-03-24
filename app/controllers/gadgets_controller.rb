@@ -23,7 +23,10 @@ class GadgetsController < ApplicationController
   # GET /gadgets/1
   # GET /gadgets/1.xml
   def show
-    @gadget = Gadget.find(params[:id])
+    id = params[:id]
+    @gadget = Gadget.find(id)
+    @next_gadget = Gadget.find(:first, :conditions => "id > "+id)
+    @previous_gadget = Gadget.find(:last, :conditions => "id < "+id)
 
     #initial right column data.
     get_one_gadget_by_one_category
