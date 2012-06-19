@@ -17887,3 +17887,97 @@ Rendering gadgets/show
   [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 0) [0m
   [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".gadget_id = 6) [0m
 Completed in 63ms (View: 33, DB: 4) | 200 OK [http://192.168.1.7/gadgets/6]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-16 15:26:30) [GET]
+  [4;36;1mGadget Load (2.1ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (21.6ms)
+Completed in 240ms (View: 173, DB: 4) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-16 15:28:48) [GET]
+  [4;35;1mGadget Load (1.6ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.6ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (10.4ms)
+Completed in 41ms (View: 21, DB: 3) | 200 OK [http://localhost/gadgets]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (133.7ms)[0m   [0;1mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (70.3ms)[0m   [0;1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (92.4ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (60.2ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "gadget_id" integer, "author_id" integer, "repliedcomments" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (84.3ms)[0m   [0;1mCREATE TABLE "feedbacks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "email" varchar(255), "user_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (58.4ms)[0m   [0;1mCREATE TABLE "gadgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "categoryid" integer, "creatdatetime" datetime, "lastupdatetime" datetime, "author_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (64.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (65.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (64.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20111025150017')[0m
+  [4;36;1mSQL (66.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110216143238')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110319064028')[0m
+  [4;36;1mSQL (66.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110326072736')[0m
+  [4;35;1mSQL (58.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110312140520')[0m
+  [4;36;1mSQL (57.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110326074513')[0m
+  [4;35;1mSQL (49.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110313090720')[0m
+  [4;36;1mSQL (66.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110313084726')[0m
+  [4;35;1mSQL (66.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110313070326')[0m
+  [4;36;1mSQL (66.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110319063231')[0m
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-18 23:15:08) [GET]
+  [4;36;1mGadget Load (2.5ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (9.7ms)
+Completed in 159ms (View: 117, DB: 4) | 200 OK [http://localhost/gadgets]

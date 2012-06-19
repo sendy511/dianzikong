@@ -19,7 +19,7 @@
 				<%= link_to gadget.title, {:action => "show", :id => gadget }%>
 			</div>
 			<div id="summary" class="summary">
-				<%= gadget.content.slice(0, 800) %>
+				<%= cleanup_html(gadget.content.slice(0, 800)) %>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				 >> <%= link_to "More ....", {:action => "show", :id => gadget }%>
 			</div>
