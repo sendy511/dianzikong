@@ -12,7 +12,7 @@ module GadgetsHelper
       end
     end
     #Remove the image, if there is no end image tag
-    if src.downcase.include?("image") && !src.downcase.include?("/image")
+    if src.downcase.include?("<image>") && !src.downcase.include?("</image>")
       src = src.slice(0, src.downcase.index("<image>"))
     end
     return src
