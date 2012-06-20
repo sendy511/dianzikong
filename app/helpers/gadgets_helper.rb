@@ -3,17 +3,15 @@ module GadgetsHelper
     #remove all html tags except the image
     src = src.gsub(/<.*?>/) do |matched|
       p matched
-      if matched.downcase.include?("/image") then
-        "</image>"
-      elsif matched.downcase.include?("image") then
-        "<image>"
+      if matched.downcase.include?("</img>") || matched.downcase.include?("<img") then
+        matched.downcase
       else
         ""
       end
     end
     #Remove the image, if there is no end image tag
-    if src.downcase.include?("<image>") && !src.downcase.include?("</image>")
-      src = src.slice(0, src.downcase.index("<image>"))
+    if src.downcase.include?("<img") && !src.downcase.include?("</img>")
+      src = src.slice(0, src.downcase.index("<img"))
     end
     return src
   end
