@@ -17,7 +17,7 @@ module GadgetsHelper
     #Remove the image, if there is no end image tag
     indx = src.rindex("<img")
     # No Img tag
-    if indx == -1 then
+    if indx == nil then
       rtn =  src
     else
       p indx

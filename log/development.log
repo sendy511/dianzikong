@@ -17981,3 +17981,45 @@ Rendering template within layouts/application
 Rendering gadgets/index
 Rendered gadgets/_recommendation (9.7ms)
 Completed in 159ms (View: 117, DB: 4) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-22 22:08:51) [GET]
+  [4;36;1mGadget Load (8.2ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (25.5ms)
+
+ActionView::TemplateError (nil can't be coerced into Fixnum) on line #22 of app/views/gadgets/index.html.erb:
+19: 				<%= link_to gadget.title, {:action => "show", :id => gadget }%>
+20: 			</div>
+21: 			<div id="summary" class="summary">
+22: 				<%= cleanup_html(gadget.content).slice(0, 400) %>
+23: 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+24: 				 >> <%= link_to "More ....", {:action => "show", :id => gadget }%>
+25: 			</div>
+
+    app/helpers/gadgets_helper.rb:24:in `cleanup_html'
+    app/views/gadgets/index.html.erb:22
+    app/views/gadgets/index.html.erb:6:in `each'
+    app/views/gadgets/index.html.erb:6
+    app/controllers/gadgets_controller.rb:17:in `index'
+
+Rendered rescues/_trace (153.2ms)
+Rendered rescues/_request_and_response (3.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-22 22:11:34) [GET]
+  [4;35;1mGadget Load (2.4ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (9.5ms)
+Completed in 120ms (View: 93, DB: 5) | 200 OK [http://localhost/gadgets]
