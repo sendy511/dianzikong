@@ -21,7 +21,7 @@
 			<div id="summary" class="summary">
 				<%= cleanup_html(gadget.content).slice(0, 400) %>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				 >> <%= link_to "More ....", {:action => "show", :id => gadget }%>
+				 <%= link_to "More ....", {:action => "show", :id => gadget }%>
 			</div>
 	    	<div class="date"><%= gadget.lastupdatetime %></div>
 		</div>

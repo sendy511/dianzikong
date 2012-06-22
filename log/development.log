@@ -18023,3 +18023,133 @@ Rendering template within layouts/application
 Rendering gadgets/index
 Rendered gadgets/_recommendation (9.5ms)
 Completed in 120ms (View: 93, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-22 22:26:56) [GET]
+  [4;36;1mGadget Load (12.9ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (20.1ms)
+Completed in 259ms (View: 172, DB: 15) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#new (for 127.0.0.1 at 2012-06-22 22:27:03) [GET]
+Redirected to http://localhost:3000/gadgets/signin_form
+Filter chain halted as [:check_authentication] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/gadgets/new]
+
+
+Processing GadgetsController#signin_form (for 127.0.0.1 at 2012-06-22 22:27:03) [GET]
+Rendering gadgets/signin_form
+Completed in 29ms (View: 24, DB: 0) | 200 OK [http://localhost/gadgets/signin_form]
+
+
+Processing GadgetsController#signin (for 127.0.0.1 at 2012-06-22 22:27:48) [POST]
+  Parameters: {"Gadget"=>{"name"=>"admin", "password"=>"8433262"}, "commit"=>"登录", "authenticity_token"=>"bdMDky2nrRPgpWcKhnGxif9DtPvQ7A4vplGdGTqfViE="}
+  [4;35;1mAdminUser Load (2.0ms)[0m   [0mSELECT * FROM "admin_users" WHERE (name = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/gadgets/new
+Completed in 24ms (DB: 2) | 302 Found [http://localhost/gadgets/signin]
+
+
+Processing GadgetsController#new (for 127.0.0.1 at 2012-06-22 22:27:48) [GET]
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" ORDER BY id[0m
+Rendering template within layouts/application
+Rendering gadgets/new
+Rendered gadgets/_form (31.6ms)
+Completed in 85ms (View: 64, DB: 1) | 200 OK [http://localhost/gadgets/new]
+
+
+Processing GadgetsController#create (for 127.0.0.1 at 2012-06-22 22:27:56) [POST]
+  Parameters: {"commit"=>"Save changes", "authenticity_token"=>"bdMDky2nrRPgpWcKhnGxif9DtPvQ7A4vplGdGTqfViE=", "gadget"=>{"author_id"=>"", "categoryid"=>"1", "title"=>"qwerq", "content"=>"<p><a href=\"http://slide.tech.sina.com.cn/notebook/slide_5_32294_22305.html\" target=\"_blank\">发布Surface平板电脑</a></p>\r\n<div class=\"img_wrapper\"><a href=\"http://slide.tech.sina.com.cn/notebook/slide_5_32294_22305.html\" target=\"_blank\"><img alt=\"微软发布Surface平板电脑 再度挑战苹果\" src=\"http://i1.sinaimg.cn/IT/2012/0619/U5388P2DT20120619072418.jpg\" title=\"微软发布Surface平板电脑 再度挑战苹果\" /></a><span class=\"img_descr\">微软发布Surface平板电脑 再度挑战苹果</span></div>"}}
+  [4;35;1mGadget Create (12.5ms)[0m   [0mINSERT INTO "gadgets" ("author_id", "updated_at", "categoryid", "created_at", "creatdatetime", "title", "content", "lastupdatetime") VALUES('', '2012-06-22 14:27:56', 1, '2012-06-22 14:27:56', '2012-06-22 14:27:56', 'qwerq', '<p><a href="http://slide.tech.sina.com.cn/notebook/slide_5_32294_22305.html" target="_blank">发布Surface平板电脑</a></p>
+<div class="img_wrapper"><a href="http://slide.tech.sina.com.cn/notebook/slide_5_32294_22305.html" target="_blank"><img alt="微软发布Surface平板电脑 再度挑战苹果" src="http://i1.sinaimg.cn/IT/2012/0619/U5388P2DT20120619072418.jpg" title="微软发布Surface平板电脑 再度挑战苹果" /></a><span class="img_descr">微软发布Surface平板电脑 再度挑战苹果</span></div>', '2012-06-22 14:27:56')[0m
+Redirected to http://localhost:3000/gadgets/8
+Completed in 131ms (DB: 12) | 302 Found [http://localhost/gadgets]
+
+
+Processing GadgetsController#show (for 127.0.0.1 at 2012-06-22 22:27:56) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE ("gadgets"."id" = 8) [0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (id > 8) LIMIT 1[0m
+  [4;36;1mGadget Load (0.8ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (id < 8) ORDER BY gadgets.id DESC LIMIT 1[0m
+  [4;35;1mCategory Load (0.9ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/show
+  [4;35;1mAuthor Load (0.4ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 0) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".gadget_id = 8) [0m
+Completed in 239ms (View: 72, DB: 6) | 200 OK [http://localhost/gadgets/8]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-22 22:28:01) [GET]
+  [4;35;1mGadget Load (1.7ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.6ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (6.0ms)
+Completed in 46ms (View: 21, DB: 3) | 200 OK [http://localhost/gadgets/]
+
+
+Processing GadgetsController#show (for 127.0.0.1 at 2012-06-22 22:29:52) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE ("gadgets"."id" = 8) [0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (id > 8) LIMIT 1[0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (id < 8) ORDER BY gadgets.id DESC LIMIT 1[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.7ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/show
+  [4;35;1mAuthor Load (0.3ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 0) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".gadget_id = 8) [0m
+Completed in 66ms (View: 33, DB: 4) | 200 OK [http://localhost/gadgets/8]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-22 22:33:04) [GET]
+  [4;36;1mGadget Load (2.0ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (12.2ms)
+Completed in 120ms (View: 85, DB: 4) | 200 OK [http://localhost/gadgets/]
+
+
+Processing GadgetsController#show (for 127.0.0.1 at 2012-06-22 22:34:30) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE ("gadgets"."id" = 8) [0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (id > 8) LIMIT 1[0m
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE (id < 8) ORDER BY gadgets.id DESC LIMIT 1[0m
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (1.0ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/show
+  [4;36;1mAuthor Load (0.3ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 0) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".gadget_id = 8) [0m
+Completed in 79ms (View: 36, DB: 6) | 200 OK [http://localhost/gadgets/8]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-06-22 22:47:15) [GET]
+  [4;36;1mGadget Load (2.2ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (6.2ms)
+Completed in 48ms (View: 21, DB: 4) | 200 OK [http://localhost/gadgets/]
