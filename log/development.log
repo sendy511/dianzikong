@@ -18153,3 +18153,547 @@ Rendering template within layouts/application
 Rendering gadgets/index
 Rendered gadgets/_recommendation (6.2ms)
 Completed in 48ms (View: 21, DB: 4) | 200 OK [http://localhost/gadgets/]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 12:35:25) [GET]
+  [4;36;1mGadget Load (13.9ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (26.0ms)
+Completed in 292ms (View: 215, DB: 16) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:27:23) [GET]
+  [4;35;1mGadget Load (2.7ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.7ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (6.3ms)
+Completed in 53ms (View: 20, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:27:37) [GET]
+  [4;36;1mGadget Load (3.0ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (8.8ms)
+Completed in 67ms (View: 37, DB: 6) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:27:37) [GET]
+  [4;35;1mGadget Load (2.6ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (7.1ms)
+Completed in 55ms (View: 25, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:27:39) [GET]
+  [4;36;1mGadget Load (1.8ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (9.0ms)
+Completed in 48ms (View: 25, DB: 4) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#8 (for 127.0.0.1 at 2012-09-22 13:32:19) [GET]
+  Parameters: {"id"=>"delete"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: add_comment, check_authentication, create, destroy, edit, index, new, show, signin, signin_form, signout, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#8 (for 127.0.0.1 at 2012-09-22 13:32:32) [GET]
+  Parameters: {"id"=>"destroy"}
+
+ActionController::UnknownAction (No action responded to 8. Actions: add_comment, check_authentication, create, destroy, edit, index, new, show, signin, signin_form, signout, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#destroy (for 127.0.0.1 at 2012-09-22 13:32:43) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mGadget Load (1.0ms)[0m   [0mSELECT * FROM "gadgets" WHERE ("gadgets"."id" = 8) [0m
+  [4;36;1mGadget Destroy (1.1ms)[0m   [0;1mDELETE FROM "gadgets" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/gadgets
+Completed in 118ms (DB: 2) | 302 Found [http://localhost/gadgets/destroy/8]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:32:44) [GET]
+  [4;35;1mGadget Load (2.4ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (1.0ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (6.0ms)
+Completed in 44ms (View: 17, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:32:51) [GET]
+  [4;36;1mGadget Load (1.5ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (9.3ms)
+Completed in 43ms (View: 21, DB: 4) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:43:27) [GET]
+  [4;36;1mGadget Load (15.7ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.7ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (123.9ms)
+Completed in 722ms (View: 517, DB: 18) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:46:31) [GET]
+  [4;35;1mGadget Load (2.5ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+ERROR: compiling _run_erb_app47views47gadgets47index46html46erb RAISED compile error
+/home/jason/workspace/DianziKong/app/views/gadgets/index.html.erb:3: syntax error, unexpected ';'
+; end if; @output_buffer.concat "\n<div...
+         ^
+Function body:           def _run_erb_app47views47gadgets47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; if false; @output_buffer.concat "\n"
+; @output_buffer.concat(( render :partial => "recommendation", :object => @category_with_one_gadget ).to_s); @output_buffer.concat "\n"
+; end if; @output_buffer.concat "\n<div id=\"itemlist\" class=\"itemlist\">\n"
+
+;  i = 0 ; @output_buffer.concat "\n"
+;  @gadgets.each do |gadget| ; @output_buffer.concat "\n\t"
+;  if i > 15 then break end; @output_buffer.concat "\n\t"
+;  i = i + 1; @output_buffer.concat "\n  \t<div id=\"item\" class =\"item\">\n  \t\t<div class=\"item_up\">\n  \t\t\t<div class=\"item_up_left\"></div>\n\t\t\t<div class=\"item_up_middle\"></div>\n\t\t\t<div class=\"item_up_right\"></div>\n\t\t\t<div class=\"clear\"></div>\n  \t\t</div>\n\t\t\n\t\t<div id=\"item_content\" class=\"item_content\">\n\t\t\t<div id=\"title\" class=\"title\">\n\t\t\t\t"
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( link_to gadget.title, {:action => "show", :id => gadget }).to_s); @output_buffer.concat "\n\t\t\t</div>\n\t\t\t<div id=\"summary\" class=\"summary\">\n\t\t\t\t"
+
+
+; @output_buffer.concat(( cleanup_html(gadget.content).slice(0, 400) ).to_s); @output_buffer.concat "\n\t\t\t\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t\t\t "
+
+; @output_buffer.concat(( link_to "More ....", {:action => "show", :id => gadget }).to_s); @output_buffer.concat "\n\t\t\t</div>\n\t    \t<div class=\"date\">"
+
+; @output_buffer.concat(( gadget.lastupdatetime ).to_s); @output_buffer.concat "</div>\n\t\t</div>\n\t\t\n\t\t<div class=\"item_bottom\">\n  \t\t\t<div class=\"item_bottom_left\"></div>\n  \t\t\t<div class=\"item_bottom_middle\"></div>\n\t\t\t<div class=\"item_bottom_right\"></div>\n\t\t\t<div class=\"clear\"></div>\n  \t\t</div>\n\t\t<div class=\"clear\"></div>\n\t</div>\n"
+
+
+
+
+
+
+
+
+
+
+;  end ; @output_buffer.concat "\n</div>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/jason/workspace/DianziKong/app/views/gadgets/index.html.erb:42:in `compile!'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_view/renderable.rb:61:in `compile'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_view/renderable.rb:28:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_view/template.rb:205:in `render_template'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_view/base.rb:265:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_view/base.rb:348:in `_render_with_layout'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_view/base.rb:262:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:1252:in `render_for_file'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:51:in `render'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:135:in `custom'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:179:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `each'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:173:in `respond'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/jason/workspace/DianziKong/app/controllers/gadgets_controller.rb:17:in `index'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:617:in `call_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/var/lib/gems/1.8/gems/activesupport-2.3.11/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/flash.rb:151:in `perform_action'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `send'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `process_without_filters'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:606:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:391:in `process'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:386:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:438:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/var/lib/gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+/var/lib/gems/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+/var/lib/gems/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `synchronize'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+/var/lib/gems/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+/var/lib/gems/1.8/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/chunked.rb:15:in `call'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/handler/mongrel.rb:67:in `process'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/var/lib/gems/1.8/gems/rack-1.1.2/lib/rack/handler/mongrel.rb:38:in `run'
+/var/lib/gems/1.8/gems/rails-2.3.11/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/jason/workspace/DianziKong/app/views/gadgets/index.html.erb:3: syntax error, unexpected ';'
+; end if; @output_buffer.concat "\n<div...
+         ^) on line #3 of app/views/gadgets/index.html.erb:
+1: <%if false%>
+2: <%= render :partial => "recommendation", :object => @category_with_one_gadget %>
+3: <%end if%>
+4: <div id="itemlist" class="itemlist">
+5: <% i = 0 %>
+6: <% @gadgets.each do |gadget| %>
+
+    app/views/gadgets/index.html.erb:42:in `compile!'
+    app/controllers/gadgets_controller.rb:17:in `index'
+
+Rendered rescues/_trace (91.5ms)
+Rendered rescues/_request_and_response (2.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:47:32) [GET]
+  [4;36;1mGadget Load (1.5ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Completed in 49ms (View: 27, DB: 4) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:50:40) [GET]
+  [4;35;1mGadget Load (2.8ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Completed in 165ms (View: 22, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:52:33) [GET]
+  [4;36;1mGadget Load (2.4ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (1.0ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Completed in 55ms (View: 24, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:54:01) [GET]
+  [4;35;1mGadget Load (2.4ms)[0m   [0mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;36;1mCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (7.7ms)
+Completed in 60ms (View: 30, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 13:55:54) [GET]
+  [4;36;1mGadget Load (2.3ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (1.1ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.9ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.4ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.5ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (9.1ms)
+Completed in 54ms (View: 24, DB: 5) | 200 OK [http://localhost/gadgets]
+
+
+Processing GadgetsController#show (for 127.0.0.1 at 2012-09-22 16:34:15) [GET]
+  Parameters: {"id"=>"add"}
+  [4;35;1mGadget Load (0.5ms)[0m   [0mSELECT * FROM "gadgets" WHERE ("gadgets"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gadget with ID=add):
+  app/controllers/gadgets_controller.rb:27:in `show'
+
+Rendered rescues/_trace (80.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing GadgetsController#new (for 127.0.0.1 at 2012-09-22 16:34:21) [GET]
+Redirected to http://localhost:3000/gadgets/signin_form
+Filter chain halted as [:check_authentication] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/gadgets/new]
+
+
+Processing GadgetsController#signin_form (for 127.0.0.1 at 2012-09-22 16:34:21) [GET]
+Rendering gadgets/signin_form
+Completed in 25ms (View: 20, DB: 0) | 200 OK [http://localhost/gadgets/signin_form]
+
+
+Processing GadgetsController#signin (for 127.0.0.1 at 2012-09-22 16:34:27) [POST]
+  Parameters: {"authenticity_token"=>"V+kz73NTFZhMrs40eJA6knY1MYzj8n+AsIGoCnrDSbo=", "commit"=>"登录", "Gadget"=>{"password"=>"8433262", "name"=>"admin"}}
+  [4;36;1mAdminUser Load (1.5ms)[0m   [0;1mSELECT * FROM "admin_users" WHERE (name = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/gadgets/new
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/gadgets/signin]
+
+
+Processing GadgetsController#new (for 127.0.0.1 at 2012-09-22 16:34:27) [GET]
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" ORDER BY id[0m
+Rendering template within layouts/application
+Rendering gadgets/new
+Rendered gadgets/_form (28.2ms)
+Completed in 77ms (View: 55, DB: 1) | 200 OK [http://localhost/gadgets/new]
+
+
+Processing GadgetsController#create (for 127.0.0.1 at 2012-09-22 16:34:53) [POST]
+  Parameters: {"authenticity_token"=>"V+kz73NTFZhMrs40eJA6knY1MYzj8n+AsIGoCnrDSbo=", "gadget"=>{"categoryid"=>"1", "title"=>"test11111", "content"=>"<p>&nbsp;</p>\r\n<p>test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111</p>\r\n<p>test11111</p>\r\n<p>&nbsp;</p>\r\n<p>1test11111test11111test11111test11111test11111tes</p>\r\n<p>t11111test11111test11111test11111test11111test1111</p>\r\n<p>1test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111</p>", "author_id"=>""}, "commit"=>"Save changes"}
+  [4;36;1mGadget Create (0.7ms)[0m   [0;1mINSERT INTO "gadgets" ("creatdatetime", "updated_at", "title", "categoryid", "content", "lastupdatetime", "created_at", "author_id") VALUES('2012-09-22 08:34:53', '2012-09-22 08:34:53', 'test11111', 1, '<p>&nbsp;</p>
+<p>test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111</p>
+<p>test11111</p>
+<p>&nbsp;</p>
+<p>1test11111test11111test11111test11111test11111tes</p>
+<p>t11111test11111test11111test11111test11111test1111</p>
+<p>1test11111test11111test11111test11111test11111test11111test11111test11111test11111test11111</p>', '2012-09-22 08:34:53', '2012-09-22 08:34:53', '')[0m
+Redirected to http://localhost:3000/gadgets/9
+Completed in 115ms (DB: 1) | 302 Found [http://localhost/gadgets]
+
+
+Processing GadgetsController#show (for 127.0.0.1 at 2012-09-22 16:34:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mGadget Load (0.9ms)[0m   [0mSELECT * FROM "gadgets" WHERE ("gadgets"."id" = 9) [0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (id > 9) LIMIT 1[0m
+  [4;35;1mGadget Load (1.0ms)[0m   [0mSELECT * FROM "gadgets" WHERE (id < 9) ORDER BY gadgets.id DESC LIMIT 1[0m
+  [4;36;1mCategory Load (0.7ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mGadget Load (0.7ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/show
+  [4;36;1mAuthor Load (0.5ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 0) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".gadget_id = 9) [0m
+Completed in 113ms (View: 67, DB: 5) | 200 OK [http://localhost/gadgets/9]
+
+
+Processing GadgetsController#index (for 127.0.0.1 at 2012-09-22 16:35:00) [GET]
+  [4;36;1mGadget Load (1.9ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.7ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.6ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.2ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.2ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (6.2ms)
+Completed in 49ms (View: 23, DB: 4) | 200 OK [http://localhost/gadgets/]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (110.2ms)[0m   [0;1mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (59.9ms)[0m   [0;1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (94.6ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (58.1ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "gadget_id" integer, "author_id" integer, "repliedcomments" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (95.0ms)[0m   [0;1mCREATE TABLE "feedbacks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "email" varchar(255), "user_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (56.3ms)[0m   [0;1mCREATE TABLE "gadgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "categoryid" integer, "creatdatetime" datetime, "lastupdatetime" datetime, "author_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (64.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (66.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (55.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20111025150017')[0m
+  [4;36;1mSQL (66.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110216143238')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110319064028')[0m
+  [4;36;1mSQL (66.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110326072736')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110312140520')[0m
+  [4;36;1mSQL (66.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110326074513')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110313090720')[0m
+  [4;36;1mSQL (58.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110313084726')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110313070326')[0m
+  [4;36;1mSQL (66.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110319063231')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (140.4ms)[0m   [0;1mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (66.8ms)[0m   [0;1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (104.7ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (65.1ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "gadget_id" integer, "author_id" integer, "repliedcomments" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (88.5ms)[0m   [0;1mCREATE TABLE "feedbacks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "email" varchar(255), "user_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (63.6ms)[0m   [0;1mCREATE TABLE "gadgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "categoryid" integer, "creatdatetime" datetime, "lastupdatetime" datetime, "author_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (65.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (65.9ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (64.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20111025150017')[0m
+  [4;36;1mSQL (66.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110216143238')[0m
+  [4;35;1mSQL (66.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110319064028')[0m
+  [4;36;1mSQL (57.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110326072736')[0m
+  [4;35;1mSQL (58.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110312140520')[0m
+  [4;36;1mSQL (66.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110326074513')[0m
+  [4;35;1mSQL (66.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110313090720')[0m
+  [4;36;1mSQL (57.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110313084726')[0m
+  [4;35;1mSQL (58.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110313070326')[0m
+  [4;36;1mSQL (57.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110319063231')[0m
+
+
+Processing GadgetsController#index (for 192.168.1.2 at 2013-05-08 22:34:42) [GET]
+  [4;36;1mGadget Load (1.9ms)[0m   [0;1mSELECT * FROM "gadgets" ORDER BY updated_at DESC LIMIT 20[0m
+  [4;35;1mCategory Load (0.5ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mGadget Load (0.4ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=1) LIMIT 1[0m
+  [4;35;1mGadget Load (0.3ms)[0m   [0mSELECT * FROM "gadgets" WHERE (categoryid=2) LIMIT 1[0m
+  [4;36;1mGadget Load (0.3ms)[0m   [0;1mSELECT * FROM "gadgets" WHERE (categoryid=3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering gadgets/index
+Rendered gadgets/_recommendation (12.7ms)
+Completed in 254ms (View: 125, DB: 3) | 200 OK [http://192.168.1.22/gadgets]

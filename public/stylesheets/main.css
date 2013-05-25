@@ -9,8 +9,13 @@ body {
     width: 1000px;
     margin: 0 auto;
     font-size: 12px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    font: 12px "宋体","Arial Narrow",HELVETICA;
 }
 
+body, p, ol, ul, td {
+  line-height: 18px;
+}
 a {
     text-decoration: none;
     color: #000;
@@ -22,8 +27,14 @@ a:visited {
 
 a:hover {
     text-decoration: underline;    
+    color: #0069CA;
 }
 
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
 .loginin {
     display: block;
     float: right;
@@ -73,9 +84,8 @@ a:hover {
 .mainContent {
     position: relative;
     display: inline;
-    float: left;
     width: 76em;
-	top: 15px;
+    top: 15px;
 }
 
 .itemlist {
@@ -150,11 +160,6 @@ a:hover {
 .item .title {
     margin-bottom: 5px;
     font-size: 16px;
-}
-
-.item .title a {
-    text-decoration: none;
-    color: #0069CA;
 }
 
 .item .summary {
