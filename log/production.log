@@ -70,3 +70,15 @@ ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: gadgets: S
   /var/lib/gems/1.8/bin/thin:19
 
 Rendering rescues/layout (internal_server_error)
+Compiled jquery.js  (5ms)  (pid 3401)
+Compiled jquery_ujs.js  (1ms)  (pid 3401)
+Compiled controls.js  (1ms)  (pid 3401)
+Compiled dragdrop.js  (1ms)  (pid 3401)
+Compiled effects.js  (1ms)  (pid 3401)
+Compiled prototype.js  (56ms)  (pid 3401)
+Compiled rails.js  (0ms)  (pid 3401)
+Compiled railsfck.js  (0ms)  (pid 3401)
+Compiled application.js  (258ms)  (pid 3401)
+Compiled main.css  (0ms)  (pid 3401)
+Compiled scaffold.css  (0ms)  (pid 3401)
+Compiled application.css  (21ms)  (pid 3401)
