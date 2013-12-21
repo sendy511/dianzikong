@@ -23,8 +23,12 @@
 </p>
 
 <div style="text-align:right;">
+<% if @previous_gadget != nil then%>
   <%= link_to '上一篇', {:id => @previous_gadget}%>
+<% end %>
+<% if @next_gadget != nil then %>
   <%= link_to '下一篇', {:id => @next_gadget}%>
+<% end %>
 </div>
 
 
