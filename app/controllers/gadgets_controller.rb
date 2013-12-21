@@ -22,8 +22,8 @@ class GadgetsController < ApplicationController
   def show
     id = params[:id]
     @gadget = Gadget.find(id)
-    @next_gadget = Gadget.where(:conditions => "id > "+id).first
-    @previous_gadget = Gadget.where(:conditions => "id < "+id).first
+    @next_gadget = Gadget.where("id > "+id).first
+    @previous_gadget = Gadget.where("id < "+id).first
 
     #initial right column data.
     get_one_gadget_by_one_category
