@@ -57,7 +57,7 @@
 
 <!-- Add comments -->
 <div style="text-align:left; margin-top:30px">
-<% form_for :comment, :url => {:action => 'add_comment', :id => @gadget} do |f| %>
+<%= form_for :comment, :url => {:action => 'add_comment', :id => @gadget} do |f| %>
 	<table>
 		<tr>
 			<td colspan=2 style="font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;添加评论：</td>

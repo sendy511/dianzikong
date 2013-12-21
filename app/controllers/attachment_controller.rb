@@ -2,7 +2,7 @@ require 'fileutils'
 
 class AttachmentController < ApplicationController
   UPLOADED = "/uploaded"
-  UPLOADED_ROOT = RAILS_ROOT + "/public" + UPLOADED
+  UPLOADED_ROOT = Rails.root + "/public" + UPLOADED
   MIME_TYPES = [
     "image/jpeg",
     "image/gif",

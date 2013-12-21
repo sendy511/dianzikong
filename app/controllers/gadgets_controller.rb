@@ -6,10 +6,7 @@ class GadgetsController < ApplicationController
   # GET /gadgets
   # GET /gadgets.xml
   def index
-    @gadgets = Gadget.find(
-      :all, 
-      :order => "updated_at DESC",
-      :limit => 20)
+    @gadgets = Gadget.order("updated_at DESC").limit(20)
     
      #initial right column data.
     get_one_gadget_by_one_category
@@ -25,8 +22,8 @@ class GadgetsController < ApplicationController
   def show
     id = params[:id]
     @gadget = Gadget.find(id)
-    @next_gadget = Gadget.find(:first, :conditions => "id > "+id)
-    @previous_gadget = Gadget.find(:last, :conditions => "id < "+id)
+    @next_gadget = Gadget.where(:conditions => "id > "+id).first
+    @previous_gadget = Gadget.where(:conditions => "id < "+id).first
 
     #initial right column data.
     get_one_gadget_by_one_category
@@ -47,7 +44,7 @@ class GadgetsController < ApplicationController
     # Authenticaiton part.
     
     @gadget = Gadget.new
-    @allCategories = Category.find(:all, :order => "id").map{|u| [u.name, u.id]}
+    @allCategories = Category.where(:order => "id").map{|u| [u.name, u.id]}
     
     respond_to do |format|
       format.html # new.html.erb
@@ -59,7 +56,7 @@ class GadgetsController < ApplicationController
   def edit
     @gadget = Gadget.find(params[:id])
      
-    @allCategories = Category.find(:all, :order => "id").map{|u| [u.name, u.id]}
+    @allCategories = Category.where(:order => "id").map{|u| [u.name, u.id]}
         
   end
 
@@ -134,7 +131,7 @@ class GadgetsController < ApplicationController
     categories = Category.all
     @category_with_one_gadget = {}
     categories.each do |category|
-       gadget = Gadget.find :first, :conditions => "categoryid=" + category.id.to_s 
+       gadget = Gadget.where(:conditions => "categoryid=" + category.id.to_s).first 
        @category_with_one_gadget[category] = gadget
     end
   end

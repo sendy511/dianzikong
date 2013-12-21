@@ -4,7 +4,7 @@
 		<title>Signin for Admin Access</title>  
 	</head>  
 	<body>  
-		<% form_for :Gadget, :url => {:action => "signin"} do |f| %>  
+		<%= form_for :Gadget, :url => {:action => "signin"} do |f| %>  
 			Username:  
 			<%= f.text_field :name %><br/>  
 			Password:  
