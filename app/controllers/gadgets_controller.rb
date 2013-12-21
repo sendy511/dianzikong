@@ -131,7 +131,7 @@ class GadgetsController < ApplicationController
     categories = Category.all
     @category_with_one_gadget = {}
     categories.each do |category|
-       gadget = Gadget.where(:conditions => "categoryid=" + category.id.to_s).first 
+       gadget = Gadget.where("categoryid=" + category.id.to_s).first 
        @category_with_one_gadget[category] = gadget
     end
   end
