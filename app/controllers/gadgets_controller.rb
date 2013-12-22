@@ -44,7 +44,7 @@ class GadgetsController < ApplicationController
     # Authenticaiton part.
     
     @gadget = Gadget.new
-    @allCategories = Category.where(:order => "id").map{|u| [u.name, u.id]}
+    @allCategories = Category.order(id: :asc).all.map{|u| [u.name, u.id]}
     
     respond_to do |format|
       format.html # new.html.erb
@@ -56,7 +56,7 @@ class GadgetsController < ApplicationController
   def edit
     @gadget = Gadget.find(params[:id])
      
-    @allCategories = Category.where(:order => "id").map{|u| [u.name, u.id]}
+    @allCategories = Category.order(id: :ASC).all.map{|u| [u.name, u.id]}
         
   end
 
