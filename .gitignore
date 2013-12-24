@@ -16,3 +16,6 @@
 
 # Ignore temp rails2 file which is backups by rails2 upgrade 
 *.rails2
+
+# Ckeditor storage 
+public/ckeditor_assets/pictures
