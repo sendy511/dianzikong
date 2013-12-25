@@ -4,7 +4,8 @@ module GadgetsHelper
     #remove all html tags except the image
     src = src.gsub(/<.*?>/) do |matched|
       #Test: print matched
-      p matched
+      #p matched
+
       # Keep the img tags
       if matched.downcase.include?("</img>") || matched.downcase.include?("<img") then
         matched
@@ -19,11 +20,8 @@ module GadgetsHelper
     if indx == nil then
       rtn =  src
     else
-      p indx
       afterImgSrc = src.slice(indx, src.length - indx)
-      p afterImgSrc
       # Have complete <img /> or <img> </img>
-      p /<img[^>]*?\/>/ =~ afterImgSrc.downcase 
       if /<img[^>]*?\/>/ =~ afterImgSrc.downcase || afterImgSrc.downcase.include?("</img>") then
         rtn = src
       else
@@ -31,9 +29,9 @@ module GadgetsHelper
       end
     end
 
-    p "----------------"
-    p rtn 
-    p "----------------"
+    #p "----------------"
+    #p rtn 
+    #p "----------------"
     return rtn 
   end
 end

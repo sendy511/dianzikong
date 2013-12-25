@@ -164,6 +164,8 @@ pre {
 
 .item .summary {
     font-size: 14px;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .item .date {
