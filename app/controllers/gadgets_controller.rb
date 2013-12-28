@@ -1,3 +1,5 @@
+require 'uri'
+
 class GadgetsController < ApplicationController
 
  #Authentication Part
@@ -43,8 +45,7 @@ class GadgetsController < ApplicationController
     
     # Authenticaiton part.
     
-    @gadget = Gadget.new
-    @allCategories = Category.order(id: :asc).all.map{|u| [u.name, u.id]}
+    new_objects
     
     respond_to do |format|
       format.html # new.html.erb
@@ -123,6 +124,18 @@ class GadgetsController < ApplicationController
      
     redirect_to :action => :show, :id => @gadget
   end
+
+  def download_from_other_website
+    address = params[:gadget][:address_of_other_website]
+    if address != nil then address.chomp!(" ") end
+    if address !~ /^#{URI.regexp}$/ then
+      raise Exception.new("the address #{address} is not a valid URI")
+    end
+    retrieved_content = Gadget.retrieve_from_website address
+    
+    new_objects
+    @gadget.retrieved_content = retrieved_content.to_s.force_encoding("UTF-8")
+  end
   
   ######## NOTIC PRIVE ZONE ###########
   private
@@ -134,6 +147,13 @@ class GadgetsController < ApplicationController
        gadget = Gadget.where("categoryid=" + category.id.to_s).first 
        @category_with_one_gadget[category] = gadget
     end
+  end
+
+  # the actual new function
+  def new_objects
+    @gadget = Gadget.new
+    
+    @allCategories = Category.order(id: :asc).all.map{|u| [u.name, u.id]}
   end
   ######## NOTIC PRIVE ZONE ###########
 end
