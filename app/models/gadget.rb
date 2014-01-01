@@ -1,4 +1,5 @@
 require 'net/http'
+require 'sina_handler'
 
 class Gadget < ActiveRecord::Base
   has_many :comments
@@ -12,6 +13,6 @@ class Gadget < ActiveRecord::Base
     uriURI = URI(uri)
     response = Net::HTTP.get_response(uriURI)
 
-    @retrieved_content = ApplicationController.helpers.cleanup_html(response.body)
+    @retrieved_content = SinaHandler.filter(response.body)
   end
 end

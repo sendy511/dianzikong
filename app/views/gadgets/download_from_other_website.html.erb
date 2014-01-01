@@ -2,7 +2,6 @@
 
 <div id="download_from_website">
   <%= form_for(@gadget, url: {action: "download_from_other_website"}) do |f| %>
-  <%= "aaaa#{@gadget.id}bbbb" %>
   URL: <%= f.text_field :address_of_other_website %>
   <%= f.submit "Download" %>
   <% end %>

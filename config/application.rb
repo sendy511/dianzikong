@@ -61,5 +61,9 @@ module DianziKong
 
     # CKEditor
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
+    # Add by jaons 2013.12.30 to make the lib reload without restart the webserver
+#config.autoload_paths << "lib"
+config.watchable_dirs['lib'] = [:rb]
   end
 end

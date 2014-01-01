@@ -132,9 +132,9 @@ class GadgetsController < ApplicationController
       raise Exception.new("the address #{address} is not a valid URI")
     end
     retrieved_content = Gadget.retrieve_from_website address
-    
     new_objects
-    @gadget.retrieved_content = retrieved_content.to_s.force_encoding("UTF-8")
+    @gadget.retrieved_content = retrieved_content
+    #logger.debug retrieved_content
   end
   
   ######## NOTIC PRIVE ZONE ###########
