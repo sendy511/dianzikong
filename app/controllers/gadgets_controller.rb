@@ -57,7 +57,7 @@ class GadgetsController < ApplicationController
   def edit
     @gadget = Gadget.find(params[:id])
      
-    @allCategories = Category.order(:id => :ASC).all.map{|u| [u.name, u.id]}
+    @allCategories = Category.order("id ASC").all.map{|u| [u.name, u.id]}
         
   end
 
@@ -153,7 +153,7 @@ class GadgetsController < ApplicationController
   def new_objects
     @gadget = Gadget.new
     
-    @allCategories = Category.order(:id => :asc).all.map{|u| [u.name, u.id]}
+    @allCategories = Category.order("id asc").all.map{|u| [u.name, u.id]}
   end
   ######## NOTIC PRIVE ZONE ###########
 end
