@@ -14,6 +14,9 @@ module GadgetsHelper
       end
     end
 
+    #remove \n
+    src = src.gsub(/\n/, "")
+
     #Remove the image, if there is no end image tag
     indx = src.downcase.rindex("<img")
     # No Img tag
