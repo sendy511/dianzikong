@@ -133,7 +133,7 @@ class GadgetsController < ApplicationController
     end
     retrieved_content = Gadget.retrieve_from_website address
     new_objects
-    @gadget.retrieved_content = retrieved_content
+    @gadget.content = retrieved_content
     #logger.debug retrieved_content
   end
   

@@ -5,7 +5,7 @@ class Gadget < ActiveRecord::Base
   has_many :comments
   belongs_to :author
 
-  attr_accessor :retrieved_content, :address_of_other_website
+  attr_accessor :address_of_other_website
 
   attr_accessible :title, :content, :categoryid, :creatdatetime, :lastupdatetime, :author_id
 
@@ -13,6 +13,6 @@ class Gadget < ActiveRecord::Base
     uriURI = URI(uri)
     response = Net::HTTP.get_response(uriURI)
 
-    @retrieved_content = SinaHandler.filter(response.body)
+    @content = SinaHandler.filter(response.body)
   end
 end

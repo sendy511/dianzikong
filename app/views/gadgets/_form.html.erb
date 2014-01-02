@@ -17,11 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :content %><br />
-    <% if @gadget.retrieved_content then %>
-        <%= f.cktext_area :retrieved_content %>
-    <% else %>
-        <%= f.cktext_area :content %>
-    <% end %>
+    <%= f.cktext_area :content %>
   </div>
   <div class="field">
     <%= f.label :categoryid %><br />
