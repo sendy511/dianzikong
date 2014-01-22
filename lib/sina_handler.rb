@@ -6,7 +6,7 @@ class SinaHandler
     content_end_index = sub_content.index("<!-- publish_helper_end -->")
     sub_content_removed_end = sub_content.slice(0..(content_end_index-1))
     cleaned_html_content = ApplicationController.helpers.cleanup_html(sub_content_removed_end)
-    #Rails.logger.debug "ttttttttttttttttttttttttttttttttt"
+    #Rails.logger.debug "32111ttttttttttttttttttttttttttttttttt"
     #Rails.logger.debug "#{b}"
     #Rails.logger.debug "ttt4ttttttttttttttttttttttttttttt"
     return cleaned_html_content

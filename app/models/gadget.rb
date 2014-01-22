@@ -1,5 +1,5 @@
 require 'net/http'
-require 'sina_handler'
+require_dependency 'sina_handler'
 
 class Gadget < ActiveRecord::Base
   has_many :comments
